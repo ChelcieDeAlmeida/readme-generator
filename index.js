@@ -34,10 +34,16 @@ const questions = init => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'Input',
             name: 'languages',
-            message: 'What did you use for this project with? (Check all that apply)',
-            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node', 'Python', 'C++', 'C#', 'Ruby', 'Rust', 'PHP', 'Scala']
+            message: 'What technologies did you use for this project? (Required)',
+            validate: languagesInput => {
+                if (languagesInput) {
+                    return true;
+                } else {
+                    console.log('Please select the technologies you used');
+                }
+            }
         },
         {
             type: 'input',

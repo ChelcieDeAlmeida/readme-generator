@@ -4,18 +4,24 @@ function renderLicenseBadge(license) {
   if (!license) {
     return '';
   } else if (license) {
-      if (license == 'MIT') {
-        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-      } else if (license == 'General Public License 2.0') {
-        return `[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
-      } else if (license == 'General Public License 3.0') {
+      if (license == 'GNU AGPLv3') {
+        return `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
+      } else if (license == 'GNU GPLv3') {
         return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      } else if (license == 'GNU LGPLv3') {
+        return `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)`
       } else if (license == 'Mozilla Public License 2.0') {
         return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
-      } else if (license == 'BSD 3-Clause License') {
-        return `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
       } else if (license == 'Apache License 2.0') {
         return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+      } else if (license == 'MIT License') {
+        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+      } else if (license == 'Boost Software License 1.0') {
+        return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+      } else if (license == 'ISC License') {
+        return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
+      } else if (license == 'The Unlicense') {
+        return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`  
     }
   }
 };
@@ -27,29 +33,41 @@ function renderLicenseLink(license) {
     return '';
   } else if (license) {
     for (i = 0; i < 1; i++) {
-      if (license == 'MIT') {
+      if (license == 'GNU AGPLv3') {
         return `
-        https://opensource.org/licenses/MIT
+        https://www.gnu.org/licenses/agpl-3.0
         `
-      } else if (license == 'General Public License 2.0') {
-        return `
-        https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-        `
-      } else if (license == 'General Public License 3.0') {
+      } else if (license == 'GNU GPLv3') {
         return `
         https://www.gnu.org/licenses/gpl-3.0
+        `
+      } else if (license == 'GNU LGPLv3') {
+        return `
+        https://www.gnu.org/licenses/lgpl-3.0
         `
       } else if (license == 'Mozilla Public License 2.0') {
         return `
         https://opensource.org/licenses/MPL-2.0
         `
-      } else if (license == 'BSD 3-Clause License') {
-        return `
-        https://opensource.org/licenses/BSD-3-Clause
-        `
       } else if (license == 'Apache License 2.0') {
         return `
         https://opensource.org/licenses/Apache-2.0
+        `
+      } else if (license == 'MIT License') {
+        return `
+        https://opensource.org/licenses/MIT
+        `
+      } else if (license == 'Boost Software License 1.0') {
+        return `
+        https://www.boost.org/LICENSE_1_0.txt
+        `
+      } else if (license == 'ISC License') {
+        return `
+        https://opensource.org/licenses/IS
+        `
+      } else if (license == 'The Unlicense') {
+        return `
+        http://unlicense.org/
         `
       }
     }
